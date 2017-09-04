@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Origami</title>
+        <link rel="stylesheet" href="origami.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="colorpicker.min.js"></script>
+    </head>
+    <body>
+    
+        <div class="container">
+            <div id="triangle1" class="card">
+                <div class="triangle tl-to-br">
+                    <div class="static-triangle"></div>
+                    <div class="moving-triangle"></div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#triangle1').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#triangle1').removeClass('animate')">Unfold</button>
+        </div>
+        <div class="container">
+            <div class="card" id="triangle2">
+                <div class="triangle tr-to-bl">
+                    <div class="static-triangle"></div>
+                    <div class="moving-triangle"></div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#triangle2').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#triangle2').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="triangle3">
+                <div class="triangle br-to-tl">
+                    <div class="static-triangle"></div>
+                    <div class="moving-triangle"></div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#triangle3').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#triangle3').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="triangle4">
+                <div class="triangle bl-to-tr">
+                    <div class="static-triangle"></div>
+                    <div class="moving-triangle"></div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#triangle4').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#triangle4').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="rect1">
+                <div class="rect l-to-r">
+                    <div class="static-rect"></div>
+                    <div class="moving-rect"></div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#rect1').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#rect1').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="rect2">
+                <div class="rect r-to-l">
+                    <div class="static-rect"></div>
+                    <div class="moving-rect"></div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#rect2').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#rect2').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="rect3">
+                <div class="rect t-to-b">
+                    <div class="static-rect"></div>
+                    <div class="moving-rect"></div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#rect3').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#rect3').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="rect4">
+                <div class="rect b-to-t">
+                    <div class="static-rect"></div>
+                    <div class="moving-rect"></div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#rect4').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#rect4').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="corner-to-quad1">
+                <div class="corner-to-quad tl-to-q1">
+                    <svg class="static-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points="600.5 600.5 0 600.5 248.5 0.5 600.5 0 " stroke="none"></polygon>
+                    </svg>
+                    <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                        <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#corner-to-quad1').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#corner-to-quad1').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="corner-to-quad2">
+                <div class="corner-to-quad tr-to-q4">
+                    <svg class="static-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points="600.5 600.5 0 600.5 248.5 0.5 600.5 0 " stroke="none"></polygon>
+                    </svg>
+                    <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                        <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#corner-to-quad2').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#corner-to-quad2').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="corner-to-quad3">
+                <div class="corner-to-quad br-to-q3">
+                    <svg class="static-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points="600.5 600.5 0 600.5 248.5 0.5 600.5 0 " stroke="none"></polygon>
+                    </svg>
+                    <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                        <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#corner-to-quad3').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#corner-to-quad3').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="corner-to-quad4">
+                <div class="corner-to-quad bl-to-q2">
+                    <svg class="static-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points="600.5 600.5 0 600.5 248.5 0.5 600.5 0 " stroke="none"></polygon>
+                    </svg>
+                    <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                        <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#corner-to-quad4').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#corner-to-quad4').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="corner-to-quad5">
+                <div class="corner-to-quad rs tr-to-q2">
+                    <svg class="static-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points="600.5 600.5 0 600.5 248.5 0.5 600.5 0 " stroke="none"></polygon>
+                    </svg>
+                    <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                        <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#corner-to-quad5').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#corner-to-quad5').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="corner-to-quad6">
+                <div class="corner-to-quad rs br-to-q1">
+                    <svg class="static-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points="600.5 600.5 0 600.5 248.5 0.5 600.5 0 " stroke="none"></polygon>
+                    </svg>
+                    <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                        <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#corner-to-quad6').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#corner-to-quad6').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="corner-to-quad7">
+                <div class="corner-to-quad rs bl-to-q4">
+                    <svg class="static-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points="600.5 600.5 0 600.5 248.5 0.5 600.5 0 " stroke="none"></polygon>
+                    </svg>
+                    <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                        <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#corner-to-quad7').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#corner-to-quad7').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <div class="card" id="corner-to-quad8">
+                <div class="corner-to-quad tl-to-q3">
+                    <svg class="static-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points="600.5 600.5 0 600.5 248.5 0.5 600.5 0 " stroke="none"></polygon>
+                    </svg>
+                    <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                        <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#corner-to-quad8').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#corner-to-quad8').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container" style="margin-top:50px;">
+            <div class="card" id="long-diamond1">
+                <div class="long-diamond">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 600.5">
+                        <polygon points=" 248.5 0 0 600.5 600.5 352 600.5 0" stroke="none"></polygon>
+                    </svg>
+                    <div class="corner-to-quad tl-to-q1">
+                        <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                            <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                        </svg>
+                    </div>
+                    <div class="corner-to-quad br-to-q1">
+                        <svg class="moving-quad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.8 652.7">
+                            <polyline points="0.7 95.9 230.3 0.7 230.3 650.2 0.5 95.4 " stroke="none"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <button class="flip-button" onclick="$('#long-diamond1').addClass('animate')">Fold</button>
+            <button class="flip-button" style="right:0;" onclick="$('#long-diamond1').removeClass('animate')">Unfold</button>
+        </div>
+        
+        <div class="container">
+            <button class="flip-button" onclick="$('.card').addClass('animate')">Fold All</button>
+            <button class="flip-button" style="right:0;" onclick="$('.card').removeClass('animate')">Unfold All</button>
+        </div>
+        
+        <div class="container cp">
+            <div id="color-picker" class="cp-default"></div>
+            <script type="text/javascript">
+                ColorPicker(
+                    document.getElementById('color-picker'),
+                    function (hex, hsv, rgb) {
+                        document.body.style.backgroundColor = hex;
+                    });
+            </script>
+        
+        </div>
+    </body>
+</html>

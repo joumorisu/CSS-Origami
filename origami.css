@@ -1,0 +1,322 @@
+.container {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+
+    margin-top: 50px;
+    margin-left: 10px;
+
+    perspective: 800px;
+}
+
+.container > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    float: left;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    z-index: 0;
+}
+
+.front {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    font-size: 175px;
+    text-align: center;
+
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: red;
+}
+
+.flip-button {
+    position: absolute;
+    bottom: -35px;
+
+    margin-top: 10px;
+}
+
+.card > div,
+.card > svg,
+.long-diamond > div,
+.long-diamond > svg {
+    position: absolute;
+}
+
+.triangle,
+.rect,
+.corner-to-quad,
+.long-diamond {
+    width: 100%;
+    height: 100%;
+
+    transform-style: flat;
+}
+
+.card {
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
+
+.moving-triangle,
+.moving-rect,
+.moving-quad {
+    outline: 1px solid transparent;
+}
+
+
+/* Triangles */
+
+.static-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    bottom: 0;
+    left: 0;
+
+    border-bottom: 200px solid red;
+    border-left: 200px solid transparent;
+
+    transform-origin: center center 0;
+}
+
+.moving-triangle {
+    position: absolute;
+
+    bottom: 0;
+    left: -70.24%;
+
+
+    border-top: 141px solid transparent;
+    border-right: 141px solid red;
+    border-bottom: 141px solid transparent;
+
+    transform-origin: 100% 100% 0;
+	transform-style: preserve-3d;
+    transition: transform 1.5s ease 0s, border-right-color 1.5s ease 0s;
+    transform: rotateZ(45deg) rotateY(0deg);
+}
+
+.card.animate .triangle .moving-triangle {
+    border-right-color: #D20000;
+    transform: rotateZ(45deg) rotateY(179deg);
+}
+
+.triangle.tr-to-bl {
+    transform-origin: 50% 50% 0;
+    transform: rotate(90deg);
+}
+
+.triangle.br-to-tl {
+    transform-origin: 50% 50% 0;
+    transform: rotate(180deg);
+}
+
+.triangle.bl-to-tr {
+    transform-origin: 50% 50% 0;
+    transform: rotate(-90deg);
+}
+
+
+/* Rectangles */
+
+.static-rect {
+    position: absolute;
+    width: 50%;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: red;
+}
+
+.moving-rect {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+
+    background-color: red;
+
+    transform-origin: 100% 0 0;
+    transition: transform 1.5s ease 0s, background-color 1.5s ease 0s;
+    transform: rotateY(0deg);
+}
+
+.card.animate .rect .moving-rect {
+    background-color: #d20000;
+
+    transition: transform 1.5s ease 0s, background-color 1.5s ease 0s;
+    transform: rotateY(179deg);
+}
+
+.rect.r-to-l {
+    transform: rotate(180deg);
+}
+
+.rect.t-to-b {
+    transform: rotate(90deg);
+}
+
+.rect.b-to-t {
+    transform: rotate(-90deg);
+}
+
+/* Quadrants and Corners */
+
+.static-quad polygon {
+    fill: red;
+    stroke: red;
+}
+
+.moving-quad {
+    position: absolute;
+    height: 109%;
+
+    top: -11.3%;
+    left: -16.2%;
+
+    overflow: visible;
+    transform-origin: 50% 50% 0;
+    transform: rotate(22.5deg);
+}
+
+.moving-quad polyline {
+    fill: red;
+    overflow: visible;
+
+    transition: transform 1.5s ease 0s, fill 1.5s ease 0s;
+    transform-origin: 100% 0 0;
+    transform: rotateY(0deg);
+}
+
+.card.animate .moving-quad > polyline {
+    fill: #D20000;
+    transform: rotateY(180deg);
+}
+
+.tr-to-q4,
+.br-to-q1 {
+    transform: rotate(90deg);
+}
+
+.br-to-q3,
+.bl-to-q4 {
+    transform: rotate(180deg);
+}
+
+.bl-to-q2,
+.tl-to-q3 {
+    transform: rotate(-90deg);
+}
+
+.tr-to-q2 .static-quad,
+.br-to-q1 .static-quad,
+.bl-to-q4 .static-quad,
+.tl-to-q3 .static-quad {
+    right: -16.5%;
+    left: auto;
+
+    transform: rotateY(180deg);
+}
+
+.tr-to-q2 .moving-quad,
+.br-to-q1 .moving-quad,
+.bl-to-q4 .moving-quad,
+.tl-to-q3 .moving-quad {
+
+    right: -16.2% !important;
+    left: auto;
+
+    transform: rotateY(180deg) rotate(22.5deg);
+}
+
+.long-diamond > svg {
+    fill: red;
+}
+
+
+.container.cp {
+	width: 240px;
+}
+
+/* Color Picker CSS
+	Borrowed/Excerpted from https://github.com/DavidDurman/FlexiColorPicker/blob/master/themes.css 
+*/
+
+.picker-wrapper, 
+.slide-wrapper {
+    position: relative;
+    float: left;
+}
+.picker-indicator,
+.slide-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+.picker,
+.slide {
+    cursor: crosshair;
+    float: left;
+}
+
+.cp-default {
+    background-color: gray;
+    padding: 12px;
+    box-shadow: 0 0 40px #000;
+    border-radius: 15px;
+    float: left;
+}
+.cp-default .picker {
+    width: 200px;
+    height: 200px;
+}
+.cp-default .slide {
+    width: 30px;
+    height: 200px;
+}
+.cp-default .slide-wrapper {
+    margin-left: 10px;
+}
+.cp-default .picker-indicator {
+    width: 5px;
+    height: 5px;
+    border: 2px solid darkblue;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: alpha(opacity=50);
+    background-color: white;
+}
+.cp-default .slide-indicator {
+    width: 100%;
+    height: 10px;
+    left: -4px;
+    opacity: .6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    filter: alpha(opacity=60);
+    border: 4px solid lightblue;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: white;
+}
