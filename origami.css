@@ -46,6 +46,10 @@
     margin-top: 10px;
 }
 
+.flip-button.unfold {
+	right: 0;
+}
+
 .card > div,
 .card > svg,
 .long-diamond > div,
