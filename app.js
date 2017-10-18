@@ -12,7 +12,7 @@ $(document).ready(function () {
 	});
 
 	$('.unfold:not(.all)').click(function () {
-		$(this).prev().removeClass('animate');
+		$(this).prev().prev().removeClass('animate');
 	});
 	
 	$('.fold.all').click(function () {
