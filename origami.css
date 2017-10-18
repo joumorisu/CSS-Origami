@@ -10,6 +10,10 @@
     perspective: 800px;
 }
 
+.container svg {
+	pointer-events: none !important;
+}
+
 .container > div {
     position: absolute;
     width: 100%;
