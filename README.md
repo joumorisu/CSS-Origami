@@ -1,6 +1,8 @@
 Name: Joseph Morris
 Date: 06/15/2016
 
+[Click here for live demo!](http://themanysidesof.me/demo/CSS-Origami/ "Click here for live demo!")
+
 # Note:
 This code has not been edited or maintained since it was written. It serves as an example of my ongoing explorations in coding.
 
